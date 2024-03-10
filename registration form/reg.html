@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <h2>Registration Form</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Enter your name" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" placeholder="Enter your age" id="age" name="age" min="18" max="60" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pin">PIN Code:</label>
+                <input type="text" placeholder="Enter PIN code" id="pin" name="pin" pattern="[0-9]{6}" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+            <div id="errorMessage"></div>
+        </form>
+    </div>
+    <script src="reg.js"></script>
+</body>
+</html>
